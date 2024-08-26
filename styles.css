@@ -1,0 +1,156 @@
+/* styles.css */
+body {
+    background-color: black;
+    color: white; /* Ensuring text is readable against the black background */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+	background-color:rgba(0, 0, 0, 0.5); /* background opacity = 50% */
+	backface-visibility: visible;
+}
+
+.modal-content {
+    background-color: black;
+	border-radius: 26px;
+    margin: 10% auto;
+    padding: 20px;
+    border: 20px solid #E07500;
+    width: 50%; /* Adjust width */
+
+
+font-family: 'SF Pro';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+
+color: #FFFFFF;
+
+
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+	
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+width: 257px;
+height: 37px;
+left: 658px;
+top: 376px;
+border: none;
+background: #E07500;
+border-radius: 26px;
+transform: rotate(0deg);
+
+
+
+font-family: 'SF Pro';
+font-style: normal;
+font-weight: 590;
+font-size: 17px;
+line-height: 20px;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+/* Additional style for disabled buttons */
+button:disabled {
+    color: #999;
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* Updated CSS for side-by-side layout */
+.switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: auto; /* Allow natural width */
+  margin-right: 10px; /* Provide some spacing between switch and text */
+}
+
+.switch-label {
+  margin-left: 10px; /* Space between the slider and the text */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: relative;
+  cursor: pointer;
+  width: 60px; /* Width of the background slider */
+  height: 34px; /* Height of the background slider */
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
